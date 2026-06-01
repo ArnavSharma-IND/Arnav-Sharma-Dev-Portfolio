@@ -20,8 +20,9 @@ export default function App() {
   const [isResumeModalOpen, setIsResumeModalOpen] = useState(false);
   const [isCopied, setIsCopied] = useState(false);
 
-  // Apply root theme selectors on load/toggle
+  // Set document title and apply root theme selectors on load/toggle
   useEffect(() => {
+    document.title = 'Arnav Sharma Portfolio';
     const root = document.documentElement;
     if (theme === 'dark') {
       root.classList.add('dark');
@@ -226,7 +227,7 @@ ${hobbiesAndInterests.map(h => `* ${h.name}: ${h.details}`).join('\n')}
                 <div className="flex items-center space-x-2">
                   <Terminal className={`w-4 h-4 ${isDark ? 'text-[#00E5FF]' : 'text-[#0A1F44]'}`} />
                   <span className={`text-xs font-mono font-bold tracking-wider ${isDark ? 'text-white' : 'text-gray-900'}`}>
-                    ARNAV_SHARMA_ACTIVE_CV.sh - RESOLVED
+                    Arnav Sharma Portfolio
                   </span>
                 </div>
                 
